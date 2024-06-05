@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #bbbbbb, #dddddd);
+}
+
+#game_container {
+  position: relative;
+}
+
+#prize_wheel {
+  display: block;
+  margin: auto;
+}
+
+#spin_button {
+  font: 1.5em/0 "Lato", sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 25%;
+  background: #ccc;
+  color: #222;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+#spin_button::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+}
